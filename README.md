@@ -1,6 +1,6 @@
 # Credit_Risk_Analysis
 ## Overview of Analysis
-For this analysis, we used a variety of supervised machine learning algorithms to predict whether loan customers were "high risk" or "low risk". We ran the data through six different machine learning algorithms, with the goal of finding which was the most effective for our purpose. Since, there are significantly more low risk loans than high risk loans we needed to use machine learning algorithms that alleviates this class imbalance. We used oversampling, undersampling, a combination of undersampling and oversampling, as well as emsemble methods. 
+For this analysis, we used a variety of supervised machine learning algorithms to predict whether loans were "high risk" or "low risk". We ran the data through six different machine learning algorithms with the goal of finding the most effective one for our purpose. Since there are significantly more low risk loans than high risk loans, we needed to use machine learning algorithms that alleviates this class imbalance. We used oversampling, undersampling, a combination of undersampling and oversampling, as well as emsemble methods. 
 ## Results
 
 ### Random Oversampler
@@ -11,7 +11,7 @@ For this analysis, we used a variety of supervised machine learning algorithms t
 - Recall/Sensitivity for Low Risk: .59
 - F1/Harmonic Mean for High Risk: .02
 - F1/Harmonic Mean for Low Risk: .74
-- The precision on the high risk loans was really low, while the recall rate was reasonably high, yet not great. The low risk had perfect precision, but low recall. This information tells us that with this classifier, we would likely misidentify too many low risk loans incorrectly as high risk ones. We would catch a reasonable amount of the high risk loans, but would miss about a quarter of them. Overall, this algorithm would not be ideal for our task. It would let too many good loan opportunities slip through the cracks, while not catching enough bad ones.
+- The precision on the high risk loans was really low, while the recall rate was reasonable, yet not great. The low risk loans had low recall. This information tells us that with this classifier, we would likely misidentify too many low risk loans incorrectly as high risk ones. We would catch a reasonable amount of the high risk loans, but would miss about a quarter of them. Overall, this algorithm would not be ideal for our task. It would let too many good loan opportunities slip through the cracks, while not catching enough bad ones.
 ![](images/random_oversampler.png)
 
 ### SMOTE
@@ -56,7 +56,7 @@ This classifier had a profile that was nearly identical to the random classifier
 - F1/Harmonic Mean for High Risk: .06
 - F1/Harmonic Mean for Low Risk: .93
 - Top 5 Importances: total_rec_prncp = .078, total_pymnt = .059, total_pymt_invoice = .056, total_rec_int = .054, last_pmt_amnt = .050
-This algorithm was more well rounded than the previous algorithms. It was a couple points weaker at detecting high risk loans than the random oversampler (.70 vs .72), but it was much better at classifying low risk loans. In banking, you do not want to take on high risk loans, but at the same time you dont want to waste a significant amount of opportunities for good loans. 
+- This algorithm was more well rounded than the previous algorithms. It was a couple points weaker at detecting high risk loans than the random oversampler (.70 vs .72), but it was much better at classifying low risk loans. In banking, you do not want to take on high risk loans, but at the same time you dont want to waste a significant amount of opportunities for good loans. 
 ![](images/balanced_random_1.png)
 ![](images/balanced_random_2.png)
 
